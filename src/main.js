@@ -1,34 +1,98 @@
 //Todo lo que se muestre en pantalla va en este archivo
 let primerCaja = document.querySelector("#inputs"); //Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById("entrar"); //id boton entrar
-<<<<<<< HEAD
-=======
-const pullInformation = () =>{ //Funcion para jalar la data
-    const link= 'https://alppacat.github.io/data-dashboard/data/laboratoria.json'; //Variable para jalar la data
-    fetch(link).then (response => response.json())
-    .then(datos => {
-        console.log(datos);
-    })
-}
- pullInformation();
->>>>>>> 9f0dbf5026d3fbd07d062fb1cf1d3c89b94ac582
+
+selectores.style.display = "none";
 
 
-
-
-buttonslog.addEventListener("click", event =>{ //Evento del botón login
+entrar.addEventListener("click", event =>{ //Evento del botón login
     let usuario = document.getElementById("usuario").value; //Valor de usuario
     let clave = parseInt(document.getElementById("clave").value); //Valor de clave
     if(usuario === "admin" && clave === 1234){ //Comparativo de simulación login
-        sedes.style.display = "block";
+        Login.style.display = "none"; //Se esconde sección para el siguiente paso
+        selectores.style.display = "block";
 
-         primerCaja.style.display = "none"; //Se esconde sección para el siguiente paso
 }else{
     alert("¡Verifica los datos ingresados!") //Alerta de falta de datos
 };
 })
-<<<<<<< HEAD
 
-  
-=======
->>>>>>> 9f0dbf5026d3fbd07d062fb1cf1d3c89b94ac582
+const link = "https://api.myjson.com/bins/1bjltq";
+  fetch(link).then((response) => {
+    return response.json();
+    }).then((data) => {
+        iterator(data);
+
+      })
+
+const iterator = (data) => {
+    const sedes =  Object.keys(data);
+// Se crea variables para las sedes
+    const lima = sedes[0];
+    const mexico = sedes[1];
+    const santiago = sedes[2];
+// Se crea variables para las generaciones
+    const genLima =  data[lima].generacion;
+    const genMexico = data[mexico].generacion;
+    const genSantiago = data[santiago].generacion;
+// Se crea variables para las estudiantes x generacion
+// lima
+
+    const estLimaGen3 = data[lima].generacion["tercera"].estudiantes;
+
+
+    const estLimaGen4 = data[lima].generacion["cuarta"].estudiantes;
+    estLimaGen4.forEach((limaGen4)=> {
+    const limaGen4Nom = limaGen4.nombre
+    });
+    const estLimaGen5 = data[lima].generacion["quinta"].estudiantes;
+    estLimaGen5.forEach((limaGen5)=> {
+    const limaGen5Nom = limaGen5.nombre
+    });
+//mexico
+    const estMexGen3 = data[mexico].generacion["tercera"].estudiantes;
+    const estMexGen4 = data[mexico].generacion["cuarta"].estudiantes;
+    const estMexGen5 = data[mexico].generacion["quinta"].estudiantes;
+// santiago
+    const estSanGen3 = data[santiago].generacion["tercera"].estudiantes;
+    const estSanGen4 = data[santiago].generacion["cuarta"].estudiantes;
+    const estSanGen5 = data[santiago].generacion["quinta"].estudiantes;
+
+// Se rota la sede y se agrega con el DOM
+  const selector = document.getElementById("selector");
+  const root = document.getElementById("root");
+    sedes.forEach((sede)=> {
+    const option = document.createElement("option");
+    option.innerHTML = sede;
+    selector.appendChild(option);
+
+    selector.addEventListener("change", iterator => {
+  // Condicionales según la opción del selector
+      if (selector.options[0].selected == true ) {
+        const sedesBox = document.createElement("div");
+        sedesBox.setAttribute("class","sedesBox");
+        sedesBox.innerHTML = estLimaGen5;
+        root.appendChild(sedesBox);
+
+    console.log("lima");
+
+          }else if (selector.options[1].selected == true) {
+              console.log("mexico");
+              }else if (selector.options[2].selected == true) {
+  console.log("santiago");
+      }
+
+    })
+
+  })
+
+// Entrando a las generaciones
+
+
+
+}
+
+
+const iteratorGen = (data) => {
+
+}

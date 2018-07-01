@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="style.css" />
@@ -8,38 +6,30 @@
   <body>
 
     <main>
-    <div id="inputs">
+
+    <section id="Login">
+      <div id="boxLogin">
       <input type="text" name= "usuario" id= "usuario" placeholder="username"> <!--Simulacion de usuario y contraseña-->
       <input type="password" name="clave" id="clave" placeholder="password">
+      <br>
       <input type="button" value="Login" id= "entrar">
-    </div>
-    <div class="cdmx">
-      <h3 class="nameSede">CDMX</h3>
-      <input type="button" value="Quinta" id="cdmxquinta">
-      <input type="button" value="Cuarta" id="cdmxcuarta"> <!--Desplegado primmera sede-->
-      <input type="button" value="Tercera" id="cdmxtercera">
-    </div>
-    <div class="lima">
-      <h3 class= "nameSede">LIMA</h3>
-      <input type="button" value="Quinta" id="limaquinta">
-      <input type="button" value="Cuarta" id="limacuarta"><!--Desplegado segunda sede-->
-      <input type="button" value="Tercera" id="limatercera">
-      </div>
-    <div class= "santiago">
-      <h3 class="nameSede">SANTIAGO</h3>
-      <input type="button" value="Quinta" id="santiquinta">
-      <input type="button" value="Cuarta" id="santicuarta"> <!--Desplegado tercera sede-->
-      <input type="button" value="Tercera" id="santitercera">
-      </div>
+        </div>
+        </section>
+    <section id ="selectores">
+      <h3 class= "textOne">Selecciona la sede</h3>
+     <select name="Sedes" id="selector"></select>
+      </section>
+
+    <div id="root"></div>
 
     </main>
 
     <script src="data.js">
     </script>
-    
+
     <script src="main.js">
     </script>
 
   </body>
-  
+
 </html>

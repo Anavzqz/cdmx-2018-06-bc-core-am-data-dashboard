@@ -1,5 +1,6 @@
-section{
+#boxLogin{
   position: absolute;
+  text-align: center;
 width: 473px;
 height: 275px;
 left: 30%;
@@ -23,7 +24,7 @@ border-radius: 78px;
 text-align: center;
 }
 
-#buttonslog{
+#entrar{
   margin-top: 15px;
   width: 129.51px;
   height: 48px;
