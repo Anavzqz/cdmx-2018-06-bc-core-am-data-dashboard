@@ -24,3 +24,28 @@ window.computeStudentsStats= () => {
  window.filterStudents = () => {
 
 };
+<<<<<<< HEAD
+=======
+
+
+
+window.computeStudentsStats = () => {
+
+};
+
+window.computeGenerationsStats = () => {
+
+};
+
+window.sortStudents = () => {
+
+};
+
+window.filterStudents = () => {
+
+
+}; 
+
+}; 
+
+>>>>>>> 9f0dbf5026d3fbd07d062fb1cf1d3c89b94ac582
