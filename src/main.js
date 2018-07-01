@@ -86,8 +86,6 @@ const iterator = (data) => {
 
   })
 
-// Entrando a las generaciones
-
 
 
 }
