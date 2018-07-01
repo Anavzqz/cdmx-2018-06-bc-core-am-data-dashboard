@@ -3,6 +3,7 @@ let primerCaja = document.querySelector("#inputs"); //Trayendo caja de inputs de
 let botonEntrar = document.getElementById("entrar"); //id boton entrar
 
 selectores.style.display = "none";
+barra.style.display = "none";
 
 
 entrar.addEventListener("click", event =>{ //Evento del botón login
@@ -11,6 +12,7 @@ entrar.addEventListener("click", event =>{ //Evento del botón login
     if(usuario === "admin" && clave === 1234){ //Comparativo de simulación login
         Login.style.display = "none"; //Se esconde sección para el siguiente paso
         selectores.style.display = "block";
+        barra.style.display = "block";
 
 }else{
     alert("¡Verifica los datos ingresados!") //Alerta de falta de datos
@@ -85,8 +87,6 @@ const iterator = (data) => {
     })
 
   })
-
-
 
 }
 

@@ -1,7 +1,31 @@
+html,body{
+  margin: 0px;
+  height: 100%;
+}
+body{
+  display: flex;
+}
+main{
+  flex: 4;
+}
+aside{
+  display: flex;
+  flex: 2;
+  order: 1;
+  background-color: #FFE521;
+
+}
+#root{
+  display: flex;
+  flex: 2;
+}
+#selectores{
+  display: flex;
+}
 #boxLogin{
   position: absolute;
   text-align: center;
-width: 473px;
+width: 500px;
 height: 275px;
 left: 30%;
 top: 30%;
@@ -14,10 +38,12 @@ border-radius: 78px;
 #usuario, #clave{
   margin-top: 20px;
   text-align: center;
+  font-weight: bold;
   width: 250px;
   height: 60px;
   background: #DAC867;
   border-radius: 15px;
+
 }
 
 #inputs{
@@ -30,7 +56,15 @@ text-align: center;
   height: 48px;
   background: #DAC867;
   border-radius: 30px;
+  font-weight: bold;
 }
-#login:hover{
-  background-color: grey;
+#entrar:active{
+  background-color: #D8BF01;
+  box-shadow: 0 5px #AA9600;
+  transform: translateY(4px);
+
+}
+
+#Login{
+  text-align: center;
 }
