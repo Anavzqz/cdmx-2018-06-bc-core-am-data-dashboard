@@ -41,12 +41,13 @@ const iterator = (data) => {
 // lima
 
     const estLimaGen3 = data[lima].generacion["tercera"].estudiantes;
-
-
     const estLimaGen4 = data[lima].generacion["cuarta"].estudiantes;
-    estLimaGen4.forEach((limaGen4)=> {
-    const limaGen4Nom = limaGen4.nombre
-    });
+    // function () {
+    //  data[lima].generacion["cuarta"].estudiantes;
+    // estLimaGen4.forEach((limaGen4)=> {
+    // const limaGen4Nom = limaGen4.nombre
+    //   })
+
     const estLimaGen5 = data[lima].generacion["quinta"].estudiantes;
     estLimaGen5.forEach((limaGen5)=> {
     const limaGen5Nom = limaGen5.nombre
@@ -61,20 +62,31 @@ const iterator = (data) => {
     const estSanGen5 = data[santiago].generacion["quinta"].estudiantes;
 
 // Se rota la sede y se agrega con el DOM
-  const selector = document.getElementById("selector");
-  const root = document.getElementById("root");
-    sedes.forEach((sede)=> {
-    const option = document.createElement("option");
-    option.innerHTML = sede;
-    selector.appendChild(option);
+//   const selector = document.getElementById("opcion");
+//   const root = document.getElementById("root");
+//     sedes.forEach((sede)=> {
+//     const option = document.createElement("opcion");
+//     option.innerHTML = sede;
+//     selector.appendChild(option);
+//
+// })
+    const botonGo = document.getElementById("gobutton");
 
     selector.addEventListener("change", iterator => {
   // Condicionales según la opción del selector
       if (selector.options[0].selected == true ) {
-        const sedesBox = document.createElement("div");
-        sedesBox.setAttribute("class","sedesBox");
-        sedesBox.innerHTML = estLimaGen5;
-        root.appendChild(sedesBox);
+         data[lima].generacion["cuarta"].estudiantes;
+        estLimaGen4.forEach((limaGen4)=> {
+        const limaGen4Nom = limaGen4.nombre;
+        const estuBox = document.createElement("div");
+        estuBox.setAttribute("class","estuBox");
+        estuBox.innerHTML = limaGen4Nom;
+        root.appendChild(estuBox);
+          })
+        // const sedesBox = document.createElement("div");
+        // sedesBox.setAttribute("class","sedesBox");
+        // sedesBox.innerHTML = estLimaGen5;
+        // root.appendChild(sedesBox);
 
     console.log("lima");
 
@@ -86,7 +98,10 @@ const iterator = (data) => {
 
     })
 
-  })
+
+// Entrando a las generaciones
+
+
 
 }
 
