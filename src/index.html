@@ -2,23 +2,30 @@
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
+    <aside id="barra">
+       <h3>Bienvenida @Lucile</h3>
+       <br>
 
+       <img id="profilepic" src="img/lucile.png" width="150px" height="150px"alt="">
+
+    </aside>
     <main>
 
 
       <section id="Login">
         <img src="img/logolabo.png" width="600px" height="220px" id="logolabor">
           <div id="boxLogin">
-            <input type="text" name= "usuario" id= "usuario" placeholder="username"> <!--Simulacion de usuario y contraseña-->
+            <input type="text" name= "usuario" id= "usuario" placeholder="username">
             <input type="password" name="clave" id="clave" placeholder="password">
             <br>
             <input type="button" value="Login" id= "entrar">
             </div>
         </section>
     <section id ="selectores">
-      <h3 class= "textOne">Selecciona la sede</h3>
+      <h3 id= "subtitulo">Selecciona una opción</h3>
       <select id="selector" name="">
         <optgroup label="Lima"></optgroup>
         <option value="Tercera generación">3era generación</option>
@@ -38,8 +45,7 @@
 
 
     </main>
-    <aside id="barra"> "aqui va la barra"
-    </aside>
+
 
     <script src="data.js">
     </script>
