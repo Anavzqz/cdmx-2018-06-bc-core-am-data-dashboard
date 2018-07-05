@@ -1,7 +1,10 @@
 # **Información general**
 
 En Laboratoria, las Training Managers se enfrentan en su día a día al análisis de datos, sin embargo, no cuentan con las herramientas necesarias y adecuadas para hacerlo. Por esta razón se recurrió a ciertas medidas para poder proporcionarles una herramienta cuyo propósito fuera la lectura sencilla y amigable para la interpretación de datos de las estudiantes.
-Se decidió hacer un estudio para ahondar en las necesidades de las Training Managers mediante cuestionarios y entrevistas personales.
+Se decidió hacer un estudio para ahondar en las necesidades de las Training Managers mediante cuestionarios y entrevistas personales para después poder usar User Testing con nuestras usuariarias.
+
+¿Por qué el no tener un acceso adecua
+
 
 **Formato de la encuesta realizada**
 
@@ -40,13 +43,19 @@ El contar con una interfaz ayudaría a la agilización y optimización del traba
  Después de trabajar con el sketch se llegó a la decisión de hacer un prototipo de la interfaz.
 
  <p align="center">
-   <img src="proto1.jpeg" width="300" height="300">
+   <img src="proto1.jpeg" width="600" height="320">
  </p>
  <p align="center">
- <img src="proto2.jpeg" width="300" height="300">
+ <img src="proto2.jpeg" width="600" height="320">
 </p>
 <p align="center">
-<img src="proto3.jpeg" width="300" height="300">
+<img src="proto3.jpeg" width="600" height="320">
 </p>
 
-Al ser el primer prototipo y ponerlo a prueba se llegó a la conclusión junto con nuestra usaria (Lucile) de que es necesario hacer algunos cambios al momento de obtener los datos y estádisticas de las alumnas.
+Al ser el primer prototipo y ponerlo a prueba se llegó a la conclusión junto con nuestra usaria (Lucile) de que es necesario hacer algunos cambios al momento de obtener y poder visualizar los datos y estádisticas de las alumnas.
+
+Algunos de los cambios propuestos a partir del feedback que se recibió después del primer User Testing fueron los siguientes:
+
+1. Cambio de colores acorde a la paleta oficial de Laboratoria.
+2. Disminución de botones a la interfaz así como la cantidad de veces que eran necesarias hacer clicks para poder llegar a la información deseada.
+3. Visualización de la información de una forma precisa y concisa para no causar confusión o abrumar al usario.

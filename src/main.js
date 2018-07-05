@@ -1,4 +1,4 @@
-//Todo lo que se muestre en pantalla va en este archivo
+// Todo lo que se muestre en pantalla va en este archivo
 let primerCaja = document.querySelector("#inputs"); //Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById("entrar"); //id boton entrar
 const selector = document.getElementById("new-selector"); 
