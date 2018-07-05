@@ -1,52 +1,38 @@
 <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <main>
-
-
-      <section id="Login">
-        <img src="img/logolabo.png" width="600px" height="220px" id="logolabor">
-          <div id="boxLogin">
-            <input type="text" name= "usuario" id= "usuario" placeholder="username"> <!--Simulacion de usuario y contraseña-->
-            <input type="password" name="clave" id="clave" placeholder="password">
-            <br>
-            <input type="button" value="Login" id= "entrar">
-            </div>
-        </section>
-    <section id ="selectores">
-      <h3 class= "textOne">Selecciona la sede</h3>
-      <select id="selector" name="">
-        <optgroup label="Lima"></optgroup>
-        <option value="Tercera generación">3era generación</option>
-        <option value="Cuarta generación">4ta generación</option>
-        <option value="Quinta generación">5ta generación</option>
-        <optgroup label="Cdmx"></optgroup>
-        <option value="Tercera generación">3era generación</option>
-        <option value="Cuarta generación">4ta generación</option>
-        <option value="Quinta generación">5ta generación</option>
-        <optgroup label="Santiago"></optgroup>
-        <option value="Tercera generación">3era generación</option>
-        <option value="Cuarta generación">4ta generación</option>
-        <option value="Quinta generación">5ta generación</option>
-      </select>
-
-    <div id="root"></div>
+<body>
+  <main>
+    <section id="inputs">
+      <input type="text" name="usuario" id="usuario" placeholder="username">
+      <!--Simulacion de usuario y contraseña-->
+      <input type="password" name="clave" id="clave" placeholder="password">
+      <input type="button" value="Login" id="entrar">
+    </section>
+    <select name="" id="new-selector">
+      
+    </select>
+    <section id="selectores">
+      
+    </section>
+    
+   
 
 
-    </main>
-    <aside id="barra"> "aqui va la barra"
-    </aside>
+  </main>
+  <script src="data.js">
 
-    <script src="data.js">
-    </script>
 
-    <script src="main.js">
-    </script>
+  </script>
 
-  </body>
+  <script src="main.js">
+
+
+  </script>
+
+</body>
 
 </html>
