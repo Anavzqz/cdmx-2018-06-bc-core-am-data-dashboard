@@ -22,7 +22,9 @@ window.onload = () => { //Carga la data al abirir la página
     let name = "";
     let email = "";
     let campus = "";
+    let generation = "";
     let stats = [];
+    let status = 0;
     let completedPercentage = 0;
     let percentageDuration = 0;
     let topics = [];
@@ -42,7 +44,18 @@ window.onload = () => { //Carga la data al abirir la página
           name = array[i].nombre;
           email = array[i].correo;
           completedPercentage = array[i].progreso.porcentajeCompletado;
+          if(completedPercentage <60){
+            let lessSixty = (stats[status]= completedPercentage);
+            status = lessSixty;
+          }else if (completedPercentage >=90){
+            let moreNinety = (stats[status] = completedPercentage);
+            status = moreNinety;
+          }else{
+            let otherNumber = (stats[status]= completedPercentage);
+            status = otherNumber;
+          }
           percentageDuration = array[i].progreso.duracionPrograma;
+          
 
           return {
             "name": name,
