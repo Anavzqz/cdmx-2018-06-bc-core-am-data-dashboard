@@ -18,7 +18,7 @@ window.onload = () => { //Carga la data al abirir la página
 
   computeStudentsStats = (laboratoria) => { //Función lista de estudiantes
     const student = [];
-    let newArray = [];
+    let newArray = []; //Variables con nombres acorde al readme
     let name = "";
     let email = "";
     let campus = "";
@@ -44,18 +44,21 @@ window.onload = () => { //Carga la data al abirir la página
           name = array[i].nombre;
           email = array[i].correo;
           completedPercentage = array[i].progreso.porcentajeCompletado;
-          if(completedPercentage <60){
-            let lessSixty = (stats[status]= completedPercentage);
+          if (completedPercentage < 60) {
+            let lessSixty = (stats[status] = completedPercentage);
             status = lessSixty;
-          }else if (completedPercentage >=90){
+          } else if (completedPercentage >= 90) {
             let moreNinety = (stats[status] = completedPercentage);
             status = moreNinety;
-          }else{
-            let otherNumber = (stats[status]= completedPercentage);
+          } else {
+            let otherNumber = (stats[status] = completedPercentage);
             status = otherNumber;
           }
           percentageDuration = array[i].progreso.duracionPrograma;
-          
+          topics = array[i].progreso.temas;
+          // for(topics in laboratoria)
+
+
 
           return {
             "name": name,
@@ -122,4 +125,3 @@ window.onload = () => { //Carga la data al abirir la página
 
   }
 }
- 

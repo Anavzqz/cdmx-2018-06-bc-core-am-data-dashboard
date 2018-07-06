@@ -1,7 +1,7 @@
 // Todo lo que se muestre en pantalla va en este archivo
 let primerCaja = document.querySelector("#inputs"); //Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById("entrar"); //id boton entrar
-const selector = document.getElementById("new-selector"); 
+
 
 entrar.addEventListener("click", event => { //Evento del botón login
   let usuario = document.getElementById("usuario").value; //Valor de usuario
@@ -14,16 +14,26 @@ entrar.addEventListener("click", event => { //Evento del botón login
   };
 })
 
-const drawCampus = (laboratoria)=>{
-  for(key in laboratoria){
-    let opcion = document.createElement("option");
-    opcion.innerHTML= key;
-    selector.appendChild(opcion)
-    selector.addEventListener("change", drawGeneration)
+
+
+
+const drawCampus = (laboratoria) => { //Función para pintar en HTML
+  let campoRellenar = document.getElementById("selector");
+  let relleno = "";
+  for (key in laboratoria) { //Iterando en Data
+    relleno += `
+              <option>Sedes</option>
+              <optgroup label="${key.toUpperCase()}">
+              <option>Tercera</option>
+              <option>Cuarta</option>
+              <option>Quinta</option>
+            </optgroup>`
+
+    campoRellenar.innerHTML = relleno
+    campoRellenar.addEventListener("change", drawGeneration)
   }
 }
 
 const drawGeneration = (e) => {
   console.log(selector[e.target.selectedIndex].innerHTML);
-  
 }
