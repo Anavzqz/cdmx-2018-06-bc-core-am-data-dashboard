@@ -16,7 +16,7 @@ entrar.addEventListener('click', event => { // Evento del botón login
   } else {
     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
   };
-});
+
 
 cleaning.addEventListener('click', (event) =>
   root.innerHTML = '');
@@ -34,6 +34,7 @@ const pullData = () => {
     .then(laboratoria => { // Asignando nombre a la información
       drawCampus(laboratoria);
 
+
       console.log(data.computeGenerationsStats(laboratoria));
       // drawGeneration(laboratoria)
       //       // console.log(totalStudents);
@@ -46,11 +47,35 @@ const pullData = () => {
           console.log('si sirve');
         }
       }
+
     });
   // .catch(error => {
   //   console.log("Error");
   // })
 };
+
+const drawCampus = (laboratoria) => { // Función para pintar en HTML
+  let campoRellenar = document.getElementById('selector');
+  let relleno = '';
+  for (key in laboratoria) { // Iterando en Data
+    relleno += `<option selected = "selected">Elegir</option> <!--Se ve culero hay que cambiarlo-->
+              <optgroup label="${key.toUpperCase()}">
+              <option>Quinta</option>
+              <option>Cuarta</option>
+              <option>Tercera</option>
+            </optgroup>`;
+
+    campoRellenar.innerHTML = relleno;
+    campoRellenar.addEventListener('change', drawGeneration);
+  }
+};
+
+const drawGeneration = (event) => {
+  console.log(selector[event.target.selectedIndex].innerHTML);
+};
+
+}
+
 pullData();
 
 const drawCampus = (laboratoria) => { // Función para pintar en HTML
@@ -132,4 +157,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 // }
 
 
+
 // console.log(selector[e.target.selectedIndex].innerHTML);
+

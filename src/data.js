@@ -1,6 +1,6 @@
-window.data = { // Carga la data al abirir la página
+window.data = { //Carga la data al abirir la página
 
-  computeStudentsStats: (laboratoria) => { // Función lista de estudiantes
+  computeStudentsStats: (laboratoria) => { //Función lista de estudiantes
     const student = [];
     let newArray = []; // Variables con nombres acorde al readme
     let name = '';
@@ -46,10 +46,12 @@ window.data = { // Carga la data al abirir la página
 
 
           return {
+
             'name': name,
             'email': email,
             'campus': campus,
             'generation': generation.toUpperCase(), // Volviendo mayúsculas
+
             stats: {
               'status': status,
               'completedPercentage': completedPercentage,
@@ -65,23 +67,30 @@ window.data = { // Carga la data al abirir la página
                 }
               }
             }
+
           };
         });
         student.push(newArray); // Agregando elementos al array
       });
+
     }
     return student;
   },
 
+
   computeGenerationsStats: (laboratoria) => { // Función generación
+
     const countGen = [];
     let otherArray = [];
     let campus = '';
     let generation = '';
     let average = 0;
 
-    for (key in laboratoria) { // Recorriendo las propiedades del objeto
-      campus = key; // Sede
+
+
+      for (key in laboratoria) { //Recorriendo las propiedades del objeto
+
+      campus = key; //Sede
       average = 0;
       const generations = Object.keys(laboratoria[key].generacion);
 
@@ -91,25 +100,21 @@ window.data = { // Carga la data al abirir la página
         const pupils = laboratoria[key].generacion[generation].estudiantes;
         otherArray = pupils.map((pupil, i, array) => { // Map usa tres parámetros para recorrer el objeto por su indice y devolver un array
           average += array[i].progreso.porcentajeCompletado;
+
           average = Math.round(average / array.length); // Redondeando promedio
           return { // Creación del objeto
             'campus': key.toUpperCase(), // Volviendo mayúsculas
             'generation': generation.toUpperCase(), // Volviendo mayúsculas
+
             'average': average,
             'count': array.length
           };
         });
+
         countGen.push(otherArray);
       });
     }
     return countGen;
-  },
 
-  sortStudens: (laboratoria) => {
 
-  },
 
-  filterStudents: (laboratoria) => {
-
-  }
-};
