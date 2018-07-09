@@ -1,43 +1,50 @@
 <head>
 
-  <meta charset="utf-8">
-  <title>Data Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+ <meta charset="utf-8">
+ <title>Data Dashboard</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="responsive.css" />
+ <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"-->
+ <!--link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/-->
 </head>
 
 <body>
-  <main>
-    <section id="inputs">
-      <input type="text" name="usuario" id="usuario" placeholder="username">
-      <!--Simulacion de usuario y contraseña-->
-      <input type="password" name="clave" id="clave" placeholder="password">
-      <input type="button" value="Login" id="entrar">
-    </section>
+ <header>
+ </header>
+ <main>
+   <img src= "../src/img/logolabo.png" alt="" class= "responsive-img">
+   <section id="inputs">
+     <input type="text" name="usuario" id="usuario" placeholder="username">
+     <!--Simulacion de usuario y contraseña-->
+     <input type="password" name="clave" id="clave" placeholder="password">
+
+     <input type="button" value="Login" id="entrar">
+     <div id="root"></div>
+   </section>
+
+ </main>
+
+ <aside id="page2">
+
+   <img class= "responsive-img" id="labo" src="../src/img/Logolabo2.jpg" alt="" >
+   <p>Bienvenid@ Training Manager</p>
+
+ <section id="selectores">
+     <select name="" id="selector">
+ </select>
 
 
-<<<<<<< HEAD
-    <select id="selector">
-        
+ </section>
+</aside>
+<section>
+ <div id="result">
 
-    </select>
-=======
-    <select id="selector"></select>
-    <div id="root">
->>>>>>> d2748d13379d2d9340fbeb8eb7d09b874fe6bf1a
+ </div>
+</section>
 
-    </div>
+ <script src="main.js"></script>
+ <script src="data.js"></script>
 
-
-  </main>
-  <script src="data.js">
-
-
-  </script>
-
-  <script src="main.js">
-
-
-  </script>
 
 </body>
 

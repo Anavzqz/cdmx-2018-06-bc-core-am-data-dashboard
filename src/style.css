@@ -1,90 +1,95 @@
-
 html,body{
-  margin: 0px;
-  /* height: 100%; */
+ margin: 0px;
+ /* height: 100%; */
 }
 body{
-  display: flex;
+ font-family: 'Roboto', sans-serif;
+ display: flex;
 }
 main{
-  flex: 4;
-  order: 2;
+ flex: 4;
+ order: 2;
+ text-align: center;
 }
 aside{
-  flex-direction: row;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size: 1.3em;
-  flex: 1;
-  order: 1;
-  background-color: #FFE521;
-
+ float: left;
+    width: 20%;
+ flex-direction: row;
+ font-family: 'Roboto', sans-serif;
+ text-align: center;
+ font-size: 1.8em;
+ flex: 1;
+ order: 1;
+ background-color: #FFE521;
+ /*display: none;*/
 }
 #profilepic{
 
-  text-align: center;
-  border-radius: 80px;
+ text-align: center;
+ border-radius: 80px;
 }
 .estuBox{
-  text-align: center;
-  display: block;
-  font-family: 'Roboto', sans-serif;
+ text-align: center;
+ display: block;
+ font-family: 'Roboto', sans-serif;
 }
 #subtitulo{
 font-family: 'Roboto', sans-serif;
 font-size: 2em;
 }
 #selectores{
-  text-align: center;
+ text-align: center;
 
 }
-#boxLogin{
-  position: absolute;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
+#inputs{
+ position: absolute;
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
 width: 500px;
 height: 275px;
 left: 30%;
 top: 30%;
-
+text-align: center;
 background: #FFE521;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 78px;
 }
 
 #usuario, #clave{
-    font-family: 'Roboto', sans-serif;
-  margin-top: 20px;
-  text-align: center;
-  font-weight: bold;
-  width: 250px;
-  height: 60px;
-  background: #DAC867;
-  border-radius: 15px;
-
-}
-
-#inputs{
+ font-family: 'Roboto', sans-serif;
+margin-top: 20px;
 text-align: center;
+font-weight: bold;
+width: 250px;
+height: 60px;
+background: #DAC867;
+border-radius: 1em;
+
 }
+
 
 #entrar{
-  margin-top: 15px;
-  width: 129.51px;
-  height: 48px;
-  background: #DAC867;
-  border-radius: 30px;
-  font-weight: bold;
+ margin-top: 15px;
+ width: 129.51px;
+ height: 48px;
+ background: #DAC867;
+ border-radius: 30px;
+ font-weight: bold;
+
 }
 #entrar:active{
-  background-color: #D8BF01;
-  box-shadow: 0 5px #AA9600;
-  transform: translateY(4px);
+ background-color: #D8BF01;
+ box-shadow: 0 5px #AA9600;
+ transform: translateY(4px);
 
+}
+#labo{
+ margin-top: .8em;
+ width: 8em;
+ height: 8em;
 }
 
 #Login{
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
+ font-family: 'Roboto', sans-serif;
+ text-align: center;
 }
-
