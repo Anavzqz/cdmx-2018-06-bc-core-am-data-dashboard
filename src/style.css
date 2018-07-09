@@ -3,25 +3,26 @@ html,body{
  /* height: 100%; */
 }
 body{
- font-family: 'Roboto', sans-serif;
- display: flex;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
 }
 main{
- flex: 4;
- order: 2;
- text-align: center;
+  flex: 4;
+  order: 2;
+  text-align: center;
 }
 aside{
- float: left;
-    width: 20%;
- flex-direction: row;
- font-family: 'Roboto', sans-serif;
- text-align: center;
- font-size: 1.8em;
- flex: 1;
- order: 1;
- background-color: #FFE521;
- /*display: none;*/
+  float: left;
+	width: 20%;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1.8em;
+  flex: 1;
+  order: 1;
+  background-color: #FFE521;
+  /*display: none;*/
+
 }
 #profilepic{
 
@@ -42,9 +43,9 @@ font-size: 2em;
 
 }
 #inputs{
- position: absolute;
- text-align: center;
- font-family: 'Roboto', sans-serif;
+  position: absolute;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
 width: 500px;
 height: 275px;
 left: 30%;
@@ -56,7 +57,7 @@ border-radius: 78px;
 }
 
 #usuario, #clave{
- font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 margin-top: 20px;
 text-align: center;
 font-weight: bold;
@@ -69,13 +70,12 @@ border-radius: 1em;
 
 
 #entrar{
- margin-top: 15px;
- width: 129.51px;
- height: 48px;
- background: #DAC867;
- border-radius: 30px;
- font-weight: bold;
-
+  margin-top: 15px;
+  width: 129.51px;
+  height: 48px;
+  background: #DAC867;
+  border-radius: 30px;
+  font-weight: bold;
 }
 #entrar:active{
  background-color: #D8BF01;
@@ -84,9 +84,9 @@ border-radius: 1em;
 
 }
 #labo{
- margin-top: .8em;
- width: 8em;
- height: 8em;
+  margin-top: .8em;
+  width: 8em;
+  height: 8em;
 }
 
 #Login{

@@ -76,7 +76,9 @@ window.data = { // Carga la data al abirir la página
     return student;
   },
 
+
   computeGenerationsStats: (laboratoria) => { // Función generación
+
 
     const countGen = [];
     let otherArray = [];
@@ -86,7 +88,6 @@ window.data = { // Carga la data al abirir la página
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
       campus = key; // Sede
-
       average = 0;
       const generations = Object.keys(laboratoria[key].generacion);
 
@@ -110,9 +111,12 @@ window.data = { // Carga la data al abirir la página
     return countGen;
   },
 
+
   sortStudens: (laboratoria) => {
 
   },
+
+  filterStudents: (laboratoria) => {
 
   }
 };

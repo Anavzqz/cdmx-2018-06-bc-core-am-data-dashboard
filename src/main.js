@@ -1,7 +1,7 @@
 // Todo lo que se muestre en pantalla va en este archivo
 let primerCaja = document.querySelector('#inputs'); // Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById('entrar'); // id boton entrar
-// comentario
+
 
 entrar.addEventListener('click', event => { // Evento del botón login
   let usuario = document.getElementById('usuario').value; // Valor de usuario
@@ -12,7 +12,9 @@ entrar.addEventListener('click', event => { // Evento del botón login
     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
   };
 
+
 });
+
 
 
 const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
@@ -20,6 +22,10 @@ const pullData = () => {
   fetch(url).then(response => response.json())
     .then(laboratoria => { // Asignando nombre a la información
       drawCampus(laboratoria);
+
+const drawCampus = (laboratoria) => { // Función para pintar en HTML
+  let campoRellenar = document.getElementById('selector');
+  let relleno = '';
 
 
       console.log(data.computeGenerationsStats(laboratoria));
@@ -63,6 +69,7 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       relleno += `
               <option>${ent[i]}</option>
             `;
+
 
       campoRellenar.innerHTML = relleno;
     }
@@ -122,6 +129,5 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 // }
 
 
+
 // console.log(selector[e.target.selectedIndex].innerHTML);
-
-
