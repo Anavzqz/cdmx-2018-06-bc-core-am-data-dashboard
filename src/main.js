@@ -17,8 +17,6 @@ entrar.addEventListener('click', event => { // Evento del botón login
     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
   };
 
-
-// "borrar este comentario jijiji"
 cleaning.addEventListener('click', (event) =>
   root.innerHTML = '');
 
@@ -160,4 +158,3 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 
 
 // console.log(selector[e.target.selectedIndex].innerHTML);
-
