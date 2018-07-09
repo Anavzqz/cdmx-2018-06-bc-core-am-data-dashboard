@@ -4,6 +4,7 @@
  <title>Data Dashboard</title>
  <link rel="stylesheet" href="style.css" />
  <link rel="stylesheet" href="responsive.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"-->
  <!--link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/-->
 </head>
@@ -12,15 +13,23 @@
  <header>
  </header>
  <main>
-   <img src= "../src/img/logolabo.png" alt="" class= "responsive-img">
+
+   <img src= "../src/img/logolabo.png" alt="" id="labor">
+
+   <section id="login-box">
+
    <section id="inputs">
      <input type="text" name="usuario" id="usuario" placeholder="username">
-     <!--Simulacion de usuario y contraseña-->
      <input type="password" name="clave" id="clave" placeholder="password">
-
+     <br>
      <input type="button" value="Login" id="entrar">
-     <div id="root"></div>
    </section>
+
+    </section>
+   <div id="root"></div>
+  </section>
+ </main>
+
 
 
 
@@ -28,24 +37,23 @@
     <div id="root">
 
 
- <aside id="page2">
+ <aside id="lateral">
 
-   <img class= "responsive-img" id="labo" src="../src/img/Logolabo2.jpg" alt="" >
+   <img class= "responsive-img" id="labo" src="../src/img/logo.jpg" alt="" >
    <p>Bienvenid@ Training Manager</p>
 
  <section id="selectores">
-     <select name="" id="selector">
- </select>
+     <select name="" id="selector"></select>
+     <button type="button" id="cleaning"name="button">Limpia</button>
+     <br>
+     <button type="button" name="button" id="exit">Salir</button>
 
 
  </section>
 </aside>
-<section>
- <div id="result">
 
- </div>
-</section>
       </main>
+
 
  <script src="main.js"></script>
  <script src="data.js"></script>

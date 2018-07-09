@@ -1,16 +1,30 @@
 // Todo lo que se muestre en pantalla va en este archivo
+lateral.style.display = 'none';
 let primerCaja = document.querySelector('#inputs'); // Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById('entrar'); // id boton entrar
-
+const cleaning = document.getElementById('cleaning');
+const exit = document.getElementById('exit');
 
 entrar.addEventListener('click', event => { // Evento del botón login
   let usuario = document.getElementById('usuario').value; // Valor de usuario
   let clave = parseInt(document.getElementById('clave').value); // Valor de clave
   if (usuario === 'admin' && clave === 1234) { // Comparativo de simulación login
     inputs.style.display = 'none'; // Se esconde sección para el siguiente paso
+    labor.style.display = 'none';
+    lateral.style.display = 'block';
+    root.style.display = 'block';
   } else {
     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
   };
+
+cleaning.addEventListener('click', (event) =>
+  root.innerHTML = '');
+
+exit.addEventListener('click', event => {
+  lateral.style.display = 'none';
+  inputs.style.display = 'block';
+  labor.style.display = 'block';
+});
 
 
 const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
@@ -144,4 +158,3 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 
 
 // console.log(selector[e.target.selectedIndex].innerHTML);
-
