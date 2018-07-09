@@ -1,6 +1,6 @@
-window.data = { //Carga la data al abirir la página
+window.data = { // Carga la data al abirir la página
 
-  computeStudentsStats: (laboratoria) => { //Función lista de estudiantes
+  computeStudentsStats: (laboratoria) => { // Función lista de estudiantes
     const student = [];
     let newArray = []; // Variables con nombres acorde al readme
     let name = '';
@@ -72,14 +72,12 @@ window.data = { //Carga la data al abirir la página
         });
         student.push(newArray); // Agregando elementos al array
       });
-
     }
     return student;
   },
 
 
   computeGenerationsStats: (laboratoria) => { // Función generación
-
     const countGen = [];
     let otherArray = [];
     let campus = '';
@@ -87,10 +85,8 @@ window.data = { //Carga la data al abirir la página
     let average = 0;
 
 
-
-      for (key in laboratoria) { //Recorriendo las propiedades del objeto
-
-      campus = key; //Sede
+    for (key in laboratoria) { // Recorriendo las propiedades del objeto
+      campus = key; // Sede
       average = 0;
       const generations = Object.keys(laboratoria[key].generacion);
 
@@ -115,6 +111,5 @@ window.data = { //Carga la data al abirir la página
       });
     }
     return countGen;
-
-
-
+  }
+};
