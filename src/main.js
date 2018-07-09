@@ -18,6 +18,7 @@ entrar.addEventListener('click', event => { // Evento del botón login
   };
 });
 
+// "borrar este comentario jijiji"
 cleaning.addEventListener('click', (event) =>
   root.innerHTML = '');
 
