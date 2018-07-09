@@ -1,7 +1,6 @@
-
 html,body{
-  margin: 0px;
-  /* height: 100%; */
+ margin: 0px;
+ /* height: 100%; */
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -23,23 +22,24 @@ aside{
   order: 1;
   background-color: #FFE521;
   /*display: none;*/
+
 }
 #profilepic{
 
-  text-align: center;
-  border-radius: 80px;
+ text-align: center;
+ border-radius: 80px;
 }
 .estuBox{
-  text-align: center;
-  display: block;
-  font-family: 'Roboto', sans-serif;
+ text-align: center;
+ display: block;
+ font-family: 'Roboto', sans-serif;
 }
 #subtitulo{
 font-family: 'Roboto', sans-serif;
 font-size: 2em;
 }
 #selectores{
-  text-align: center;
+ text-align: center;
 
 }
 #inputs{
@@ -76,12 +76,11 @@ border-radius: 1em;
   background: #DAC867;
   border-radius: 30px;
   font-weight: bold;
-  
 }
 #entrar:active{
-  background-color: #D8BF01;
-  box-shadow: 0 5px #AA9600;
-  transform: translateY(4px);
+ background-color: #D8BF01;
+ box-shadow: 0 5px #AA9600;
+ transform: translateY(4px);
 
 }
 #labo{
@@ -91,6 +90,6 @@ border-radius: 1em;
 }
 
 #Login{
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
+ font-family: 'Roboto', sans-serif;
+ text-align: center;
 }

@@ -11,13 +11,22 @@ entrar.addEventListener('click', event => { // Evento del botón login
   } else {
     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
   };
+
+
 });
+
+
 
 const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
 const pullData = () => {
   fetch(url).then(response => response.json())
     .then(laboratoria => { // Asignando nombre a la información
       drawCampus(laboratoria);
+
+const drawCampus = (laboratoria) => { // Función para pintar en HTML
+  let campoRellenar = document.getElementById('selector');
+  let relleno = '';
+
 
       console.log(data.computeGenerationsStats(laboratoria));
       // drawGeneration(laboratoria)
@@ -31,6 +40,7 @@ const pullData = () => {
           console.log('si sirve');
         }
       }
+
     });
   // .catch(error => {
   //   console.log("Error");
@@ -41,6 +51,7 @@ pullData();
 const drawCampus = (laboratoria) => { // Función para pintar en HTML
   let campoRellenar = document.getElementById('selector');
   let relleno = '';
+
 
   for (key in laboratoria) {
     relleno +=// Iterando en Data
@@ -58,6 +69,7 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       relleno += `
               <option>${ent[i]}</option>
             `;
+
 
       campoRellenar.innerHTML = relleno;
     }
@@ -115,6 +127,7 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 //   }
 //   }
 // }
+
 
 
 // console.log(selector[e.target.selectedIndex].innerHTML);
