@@ -29,11 +29,11 @@ aside{
  text-align: center;
  border-radius: 80px;
 }
-.estuBox{
+/* .estuBox{
  text-align: center;
  display: block;
  font-family: 'Roboto', sans-serif;
-}
+} */
 #subtitulo{
 font-family: 'Roboto', sans-serif;
 font-size: 2em;
@@ -57,25 +57,32 @@ border-radius: 78px;
 }
 
 #usuario, #clave{
-  font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', sans-serif;
+color: #442A07;
+
 margin-top: 20px;
 text-align: center;
 font-weight: bold;
 width: 250px;
 height: 60px;
-background: #DAC867;
+background: #FFEB54;
 border-radius: 1em;
 
 }
 
 
 #entrar{
-  margin-top: 15px;
-  width: 129.51px;
-  height: 48px;
-  background: #DAC867;
-  border-radius: 30px;
-  font-weight: bold;
+
+ font-family: 'Roboto', sans-serif;
+ color: #442A07;
+ margin-top: 15px;
+ width: 129.51px;
+ height: 48px;
+ background: #FFEB54;
+ border-radius: 30px;
+ font-weight: bold;
+
+
 }
 #entrar:active{
  background-color: #D8BF01;
