@@ -1,22 +1,25 @@
 // Todo lo que se muestre en pantalla va en este archivo
-lateral.style.display = 'none';
+// lateral.style.display = 'none';
 let primerCaja = document.querySelector('#inputs'); // Trayendo caja de inputs de HTML
 let botonEntrar = document.getElementById('entrar'); // id boton entrar
 const cleaning = document.getElementById('cleaning');
 const exit = document.getElementById('exit');
 
-entrar.addEventListener('click', event => { // Evento del botón login
-  let usuario = document.getElementById('usuario').value; // Valor de usuario
-  let clave = parseInt(document.getElementById('clave').value); // Valor de clave
-  if (usuario === 'admin' && clave === 1234) { // Comparativo de simulación login
-    inputs.style.display = 'none'; // Se esconde sección para el siguiente paso
-    labor.style.display = 'none';
-    lateral.style.display = 'block';
-    root.style.display = 'block';
-  } else {
-    alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
-  };
+// entrar.addEventListener('click', event => { // Evento del botón login
+//   let usuario = document.getElementById('usuario').value; // Valor de usuario
+//   let clave = parseInt(document.getElementById('clave').value); // Valor de clave
+//   if (usuario === 'admin' && clave === 1234) { // Comparativo de simulación login
+//     inputs.style.display = 'none'; // Se esconde sección para el siguiente paso
+//     labor.style.display = 'none';
+//     lateral.style.display = 'block';
+//     root.style.display = 'block';
+//   } else {
+//     alert('¡Verifica los datos ingresados!'); // Alerta de falta de datos
+//   };
+// });
 
+
+// "borrar este comentario jijiji"
 cleaning.addEventListener('click', (event) =>
   root.innerHTML = '');
 
@@ -32,9 +35,9 @@ const pullData = () => {
   fetch(url).then(response => response.json())
     .then(laboratoria => { // Asignando nombre a la información
       drawCampus(laboratoria);
-
-
       console.log(data.computeGenerationsStats(laboratoria));
+
+      // console.log(data.computeGenerationsStats(laboratoria));
       // drawGeneration(laboratoria)
       //       // console.log(totalStudents);
       //       countStudents(laboratoria)
@@ -46,34 +49,11 @@ const pullData = () => {
           console.log('si sirve');
         }
       }
-
     });
   // .catch(error => {
   //   console.log("Error");
   // })
 };
-
-const drawCampus = (laboratoria) => { // Función para pintar en HTML
-  let campoRellenar = document.getElementById('selector');
-  let relleno = '';
-  for (key in laboratoria) { // Iterando en Data
-    relleno += `<option selected = "selected">Elegir</option> <!--Se ve culero hay que cambiarlo-->
-              <optgroup label="${key.toUpperCase()}">
-              <option>Quinta</option>
-              <option>Cuarta</option>
-              <option>Tercera</option>
-            </optgroup>`;
-
-    campoRellenar.innerHTML = relleno;
-    campoRellenar.addEventListener('change', drawGeneration);
-  }
-};
-
-const drawGeneration = (event) => {
-  console.log(selector[event.target.selectedIndex].innerHTML);
-};
-
-}
 
 pullData();
 
@@ -105,28 +85,38 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
     arr = data.computeGenerationsStats(laboratoria);
     let campoRellenar = document.getElementById('root');
     let relleno = '';
+    let valuess = document.getElementById('selector').value;
+    console.log(valuess);
+    for (let i = 0; i < arr.length; i++) {
+      let arry = arr[i];
+      console.log(Object.keys(arry[i]))
+      relleno += `
+      //           <p>${data.computeGenerationsStats(laboratoria)[i]} </p>
+      //           `;
+    }
+
     // for (let i = 0; i < arr.length; i++) {
     //   totalStudents = arr[i][0].count;
     // console.log(arr);7
-    if (selector.options[1].selected === true) {
-      console.log(arr[1][1].count);
-
-      relleno += `
-              <p>Promedio general: </p>
-              <p>Estudiantes totales: ${arr[1][1].count} </p>
-              `;
-
-      campoRellenar.innerHTML = relleno;
-    } else if (selector.options[1].selected === false) {
-      console.log(arr[0][0].count);
-
-      relleno += `
-            <p>Promedio general: </p>
-            <p>Estudiantes totales: ${arr[0][0].count} </p>
-
-      `;
-      campoRellenar.innerHTML = relleno;
-    }
+    // if (selector.options[1].selected === true) {
+    //   console.log(arr[1][1].count);
+    //
+    //   relleno += `
+    //           <p>Promedio general: </p>
+    //           <p>Estudiantes totales: ${arr[1][1].count} </p>
+    //           `;
+    //
+    //   campoRellenar.innerHTML = relleno;
+    // } else if (selector.options[1].selected === false) {
+    //   console.log(arr[0][0].count);
+    //
+    //   relleno += `
+    //         <p>Promedio general: </p>
+    //         <p>Estudiantes totales: ${arr[0][0].count} </p>
+    //
+    //   `;
+    //   campoRellenar.innerHTML = relleno;
+    // }
   });
 };
 
