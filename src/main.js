@@ -39,9 +39,7 @@ const pullData = () => {
       const generaciones = data.computeGenerationsStats(laboratoria);
       const obtenerGeneracion = data.getGeneration(laboratoria);
       const obtenerCampus = data.getCampus(laboratoria);
-      console.log(obtenerCampus);
-      console.log(obtenerGeneracion);
-      console.log();
+
 
       // console.log(data.computeGenerationsStats(laboratoria));
       // drawGeneration(laboratoria)
@@ -106,11 +104,13 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       console.log(estudiantesTotales);
       if (valuess === generacion) {
         relleno += `
+                  <div class="estudiantes-box">
+                  <h1>Estudiantes totales:</h1>
                   <p>${estudiantesTotales}</p>
+                  <p>Promedio general: </p>
+                  </div>
                     `;
         root.innerHTML = relleno;
-      } else {
-        console.log('pos no');
       }
     }
     // relleno += `
