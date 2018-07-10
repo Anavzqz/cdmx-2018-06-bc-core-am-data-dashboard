@@ -40,19 +40,6 @@ const pullData = () => {
       const obtenerGeneracion = data.getGeneration(laboratoria);
       const obtenerCampus = data.getCampus(laboratoria);
 
-
-      // console.log(data.computeGenerationsStats(laboratoria));
-      // drawGeneration(laboratoria)
-      //       // console.log(totalStudents);
-      //       countStudents(laboratoria)
-      // arr = data.computeGenerationsStats(laboratoria);
-      // for (let i = 0; i < arr.length; i++) {
-      //   totalStudents = arr[i][0].count;
-      //   // console.log(totalStudents);
-      //   if (document.getElementById('selector').value === arr[i][0]) {
-      //     console.log('si sirve');
-      //   }
-      // }
     });
   // .catch(error => {
   //   console.log("Error");
@@ -62,110 +49,59 @@ const pullData = () => {
 pullData();
 
 const drawCampus = (laboratoria) => { // Función para pintar en HTML
-  let campoRellenar = document.getElementById('selector');
-  let relleno = '';
+  let fillingCampus = document.getElementById('selector');
+  let root = document.getElementById('root')
+  let fillingC = '';
 
   for (key in laboratoria) {
-    relleno +=// Iterando en Data
-    `<optgroup label="${key.charAt(0).toUpperCase() + key.slice(1)}">
-    </optgroup>
+    fillingC +=// Iterando en Data
+    `<option>${key}</option>
     `;
-    let values = Object.keys(laboratoria[key].generacion);
-    // console.log(laboratoria[key].generacion);
-    let ent = Object.values(values);
-    // console.log(ent);
+    fillingCampus.innerHTML = fillingC;
+  }
+  let fillingGeneration = document.getElementById('selector-gen');
+  let fillingG = '';
+  let values = Object.keys(laboratoria[key].generacion);
+  let ent = Object.values(values);
+  for (let i = 0; i < ent.length; i++) {
+    ent[i];
 
-    for (let i = 0; i < ent.length; i++) {
-      ent[i];
-
-      relleno += `
+    fillingG += `
               <option>${ent[i]}</option>
             `;
+    fillingGeneration.innerHTML = fillingG;
 
-      campoRellenar.innerHTML = relleno;
-    }
-  }
-  campoRellenar.addEventListener('change', countStudents => {
-    const estudiantes = data.computeStudentsStats(laboratoria);
-    const generaciones = data.computeGenerationsStats(laboratoria);
-    const obtenerGeneracion = data.getGeneration(laboratoria);
-    const obtenerCampus = data.getCampus(laboratoria);
-    arr = data.computeGenerationsStats(laboratoria);
-    let root = document.getElementById('root');
-    let relleno = '';
-    let valuess = document.getElementById('selector').value;
-    console.log(valuess);
-    for (let i = 0; i < generaciones.length; i++) {
-      let campus = generaciones[i][i].campus;
-      let generacion = generaciones[i][i].generation;
-      let estudiantesTotales = generaciones[i][i].count;
-      // console.log(generacion);
-      // console.log(campus);
-      console.log(estudiantesTotales);
-      if (valuess === generacion) {
-        relleno += `
+    fillingGeneration.addEventListener('change', countStudents => {
+      const estudiantes = data.computeStudentsStats(laboratoria);
+      const generaciones = data.computeGenerationsStats(laboratoria);
+      const obtenerGeneracion = data.getGeneration(laboratoria);
+      const obtenerCampus = data.getCampus(laboratoria);
+      arr = data.computeGenerationsStats(laboratoria);
+      let fill = document.getElementById('root')
+      let root = '';
+      let selectCampus = document.getElementById('selector').value;
+      let selectGeneration = document.getElementById('selector-gen').value;
+      for (let i = 0; i < generaciones.length; i++) {
+        let campus = generaciones[i][i].campus;
+        let generacion = generaciones[i][i].generation;
+        let estudiantesTotales = generaciones[i][i].count;
+        // console.log(generacion);
+        console.log(generaciones[i][i].generation);
+        if (selectGeneration === generacion && selectCampus === campus) {
+          console.log('si sirvo we');
+          root += `
                   <div class="estudiantes-box">
                   <h1>Estudiantes totales:</h1>
                   <p>${estudiantesTotales}</p>
                   <p>Promedio general: </p>
                   </div>
                     `;
-        root.innerHTML = relleno;
+          fill.innerHTML = root;
+        }
+        else {
+          console.log("hello");
+        }
       }
-    }
-    // relleno += `
-    // //           <p>${data.computeGenerationsStats(laboratoria)[i]} </p>
-    // //           `;
-
-    // for (let i = 0; i < arr.length; i++) {
-    //   totalStudents = arr[i][0].count;
-    // console.log(arr);7
-    // if (selector.options[1].selected === true) {
-    //   console.log(arr[1][1].count);
-    //
-    //   relleno += `
-    //           <p>Promedio general: </p>
-    //           <p>Estudiantes totales: ${arr[1][1].count} </p>
-    //           `;
-    //
-    //   campoRellenar.innerHTML = relleno;
-    // } else if (selector.options[1].selected === false) {
-    //   console.log(arr[0][0].count);
-    //
-    //   relleno += `
-    //         <p>Promedio general: </p>
-    //         <p>Estudiantes totales: ${arr[0][0].count} </p>
-    //
-    //   `;
-    //   campoRellenar.innerHTML = relleno;
-    // }
-  });
+    });
+  }
 };
-
-// const drawGeneration = (e) => {
-//
-//   console.log(selector[e.target.selectedIndex].innerHTML);
-//   }
-
-
-// let seleccionIndex = document.getElementById("selector").selectedIndex;
-// for (key in laboratoria) {
-//   let values = Object.keys(laboratoria[key].generacion)
-//
-// const root = document.getElementById("root");
-// let totalArr = data.computeGenerationsStats(laboratoria);
-// for (let i = 0; i < totalArr.length; i++) {
-//   estudiantesTotales = totalArr[i].length;
-//   console.log(estudiantesTotales);
-//   if ( seleccionIndex == key) {
-//
-//     estudiantesTotales += `
-//             <p>${estudiantesTotales} </p>
-//     `
-//     root.innerHTML = estudiantesTotales
-//   }
-//   }
-// }
-
-
-// console.log(selector[e.target.selectedIndex].innerHTML);
