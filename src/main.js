@@ -30,10 +30,6 @@ exit.addEventListener('click', event => {
 });
 
 
-});
-
-
-
 const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
 const pullData = () => {
   fetch(url).then(response => response.json())
@@ -48,7 +44,6 @@ const pullData = () => {
       console.log();
 
       // console.log(data.computeGenerationsStats(laboratoria));
-
       // drawGeneration(laboratoria)
       //       // console.log(totalStudents);
       //       countStudents(laboratoria)
@@ -72,7 +67,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
   let campoRellenar = document.getElementById('selector');
   let relleno = '';
 
-
   for (key in laboratoria) {
     relleno +=// Iterando en Data
     `<optgroup label="${key.charAt(0).toUpperCase() + key.slice(1)}">
@@ -89,7 +83,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       relleno += `
               <option>${ent[i]}</option>
             `;
-
 
       campoRellenar.innerHTML = relleno;
     }
@@ -175,6 +168,4 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 // }
 
 
-
 // console.log(selector[e.target.selectedIndex].innerHTML);
-
