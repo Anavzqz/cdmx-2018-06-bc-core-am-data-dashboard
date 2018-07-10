@@ -30,10 +30,6 @@ exit.addEventListener('click', event => {
 });
 
 
-});
-
-
-
 const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
 const pullData = () => {
   fetch(url).then(response => response.json())
@@ -43,17 +39,11 @@ const pullData = () => {
       const generaciones = data.computeGenerationsStats(laboratoria);
       const obtenerGeneracion = data.getGeneration(laboratoria);
       const obtenerCampus = data.getCampus(laboratoria);
-<<<<<<< HEAD
-
-      // console.log(data.computeGenerationsStats(laboratoria));
-=======
       console.log(obtenerCampus);
       console.log(obtenerGeneracion);
       console.log();
 
       // console.log(data.computeGenerationsStats(laboratoria));
-
->>>>>>> 7ffb47bbdbc3c61f6359b640dea83abed201b8a2
       // drawGeneration(laboratoria)
       //       // console.log(totalStudents);
       //       countStudents(laboratoria)
@@ -77,7 +67,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
   let campoRellenar = document.getElementById('selector');
   let relleno = '';
 
-
   for (key in laboratoria) {
     relleno +=// Iterando en Data
     `<optgroup label="${key.charAt(0).toUpperCase() + key.slice(1)}">
@@ -94,7 +83,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       relleno += `
               <option>${ent[i]}</option>
             `;
-
 
       campoRellenar.innerHTML = relleno;
     }
@@ -115,24 +103,12 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       let estudiantesTotales = generaciones[i][i].count;
       // console.log(generacion);
       // console.log(campus);
-<<<<<<< HEAD
-      console.log(generaciones[i][i]);
-      // falta agregar condicional para la eleccion de campus y que no imprima toda las sedes
-      if (valuess === generacion && valuess === campus) {
-=======
       console.log(estudiantesTotales);
       if (valuess === generacion) {
->>>>>>> 7ffb47bbdbc3c61f6359b640dea83abed201b8a2
         relleno += `
                   <p>${estudiantesTotales}</p>
                     `;
         root.innerHTML = relleno;
-<<<<<<< HEAD
-      }
-    }
-  });
-};
-=======
       } else {
         console.log('pos no');
       }
@@ -192,7 +168,4 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 // }
 
 
-
 // console.log(selector[e.target.selectedIndex].innerHTML);
-
->>>>>>> 7ffb47bbdbc3c61f6359b640dea83abed201b8a2
