@@ -41,6 +41,16 @@ font-size: 2em;
  text-align: center;
 
 }
+.selecciones{
+font-family: 'Roboto', sans-serif;
+margin-top: 20px;
+text-align: center;
+font-weight: bold;
+width: 100px;
+height: 60px;
+background: #DAC867;
+border-radius: 1em;
+}
 #inputs{
  position: absolute;
  text-align: center;
