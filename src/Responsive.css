@@ -1,0 +1,79 @@
+/* Para que se adapte a Telefonos*/
+@media (min-width: 576px) {
+    #selector{
+        font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      width: 100px;
+      height: 60px;
+      background: #DAC867;
+      border-radius: 1em;
+        }
+    #labo{
+        margin-top: .8em;
+        width: 5em;
+        height: 5em;
+      }
+}
+
+/* Para que se adapte a tablets*/
+@media (min-width: 768px) {
+    #selector{
+        font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      width: 200px;
+      height: 50px;
+      background: #DAC867;
+      border-radius: 1em;
+    
+    }
+    #labo{
+        margin-top: .8em;
+        width: 6em;
+        height: 6em;
+      }
+}
+
+/* Para que se adapte a computadoras*/
+@media (min-width: 992px) {
+    #selector{
+        font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      width: 250px;
+      height: 60px;
+      background: #DAC867;
+      border-radius: 1em;
+    
+    }
+    #labo{
+        margin-top: .8em;
+        width: 8em;
+        height: 8em;
+      }
+
+}
+
+/* Para que se adapte a computadoras grandes*/
+@media (min-width: 1200px) {
+    #selector{
+        font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      width: 250px;
+      height: 60px;
+      background: #DAC867;
+      border-radius: 1em;
+    
+    }
+    #labo{
+        margin-top: .8em;
+        width: 8em;
+        height: 8em;
+      }
+}
