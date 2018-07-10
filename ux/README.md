@@ -3,9 +3,6 @@
 En Laboratoria, las Training Managers se enfrentan en su día a día al análisis de datos, sin embargo, no cuentan con las herramientas necesarias y adecuadas para hacerlo. Por esta razón se recurrió a ciertas medidas para poder proporcionarles una herramienta cuyo propósito fuera la lectura sencilla y amigable para la interpretación de datos de las estudiantes.
 Se decidió hacer un estudio para ahondar en las necesidades de las Training Managers mediante cuestionarios y entrevistas personales para después poder usar User Testing con nuestras usuariarias.
 
-¿Por qué el no tener un acceso adecua
-
-
 **Formato de la encuesta realizada**
 
 <p align="center">

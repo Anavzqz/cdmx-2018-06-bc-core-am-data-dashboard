@@ -1,7 +1,6 @@
 window.data = { // Carga la data al abirir la página
 
   computeStudentsStats: (laboratoria) => { // Función lista de estudiantes
-
     const student = [];
     let newArray = []; // Variables con nombres acorde al readme
     let name = '';
@@ -21,7 +20,7 @@ window.data = { // Carga la data al abirir la página
     let duration = 0;
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
-      campus = key.toUpperCase(); // Obteniendo sede y volviendola mayúsculas
+      campus = key; // Obteniendo sede y volviendola mayúsculas
       const generations = Object.keys(laboratoria[key].generacion); // Devolviendo las propiedades del objeto generacion
 
       generations.map((generation) => {
@@ -51,7 +50,7 @@ window.data = { // Carga la data al abirir la página
             'name': name,
             'email': email,
             'campus': campus,
-            'generation': generation.toUpperCase(), // Volviendo mayúsculas
+            'generation': generation, // Volviendo mayúsculas
 
             stats: {
               'status': status,
@@ -68,7 +67,9 @@ window.data = { // Carga la data al abirir la página
                 }
               }
             }
+
           };
+
         });
         student.push(newArray); // Agregando elementos al array
       });
@@ -77,14 +78,14 @@ window.data = { // Carga la data al abirir la página
   },
 
 
+
   computeGenerationsStats: (laboratoria) => { // Función generación
-
-
     const countGen = [];
     let otherArray = [];
     let campus = '';
     let generation = '';
     let average = 0;
+
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
       campus = key; // Sede
@@ -97,27 +98,33 @@ window.data = { // Carga la data al abirir la página
         const pupils = laboratoria[key].generacion[generation].estudiantes;
         otherArray = pupils.map((pupil, i, array) => { // Map usa tres parámetros para recorrer el objeto por su indice y devolver un array
           average += array[i].progreso.porcentajeCompletado;
+
           average = Math.round(average / array.length); // Redondeando promedio
           return { // Creación del objeto
-            'campus': key.toUpperCase(), // Volviendo mayúsculas
-            'generation': generation.toUpperCase(), // Volviendo mayúsculas
+            'campus': key, // Volviendo mayúsculas
+            'generation': generation, // Volviendo mayúsculas
+
             'average': average,
             'count': array.length
           };
         });
+
         countGen.push(otherArray);
       });
     }
     return countGen;
   },
-
-
-  sortStudens: (laboratoria) => {
-
+  getGeneration: (laboratoria) => {
+    for (key in laboratoria) {
+      const generatioN = Object.keys(laboratoria[key].generacion);
+      return generatioN;
+    }
   },
-
-  filterStudents: (laboratoria) => {
+  getCampus: (laboratoria) => {
+    let sedes = Object.getOwnPropertyNames(laboratoria);
+    return sedes;
+  },
+  promedio: (laboratoria) => {
 
   }
 };
-
