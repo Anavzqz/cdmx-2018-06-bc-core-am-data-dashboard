@@ -35,20 +35,26 @@ const pullData = () => {
   fetch(url).then(response => response.json())
     .then(laboratoria => { // Asignando nombre a la información
       drawCampus(laboratoria);
-      console.log(data.computeGenerationsStats(laboratoria));
+      const estudiantes = data.computeStudentsStats(laboratoria);
+      const generaciones = data.computeGenerationsStats(laboratoria);
+      const obtenerGeneracion = data.getGeneration(laboratoria);
+      const obtenerCampus = data.getCampus(laboratoria);
+      console.log(obtenerCampus);
+      console.log(obtenerGeneracion);
+      console.log();
 
       // console.log(data.computeGenerationsStats(laboratoria));
       // drawGeneration(laboratoria)
       //       // console.log(totalStudents);
       //       countStudents(laboratoria)
-      arr = data.computeGenerationsStats(laboratoria);
-      for (let i = 0; i < arr.length; i++) {
-        totalStudents = arr[i][0].count;
-        // console.log(totalStudents);
-        if (document.getElementById('selector').value === arr[i][0]) {
-          console.log('si sirve');
-        }
-      }
+      // arr = data.computeGenerationsStats(laboratoria);
+      // for (let i = 0; i < arr.length; i++) {
+      //   totalStudents = arr[i][0].count;
+      //   // console.log(totalStudents);
+      //   if (document.getElementById('selector').value === arr[i][0]) {
+      //     console.log('si sirve');
+      //   }
+      // }
     });
   // .catch(error => {
   //   console.log("Error");
@@ -82,18 +88,34 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
     }
   }
   campoRellenar.addEventListener('change', countStudents => {
+    const estudiantes = data.computeStudentsStats(laboratoria);
+    const generaciones = data.computeGenerationsStats(laboratoria);
+    const obtenerGeneracion = data.getGeneration(laboratoria);
+    const obtenerCampus = data.getCampus(laboratoria);
     arr = data.computeGenerationsStats(laboratoria);
-    let campoRellenar = document.getElementById('root');
+    let root = document.getElementById('root');
     let relleno = '';
     let valuess = document.getElementById('selector').value;
     console.log(valuess);
-    for (let i = 0; i < arr.length; i++) {
-      let arry = arr[i];
-      console.log(Object.keys(arry[i]))
-      relleno += `
-      //           <p>${data.computeGenerationsStats(laboratoria)[i]} </p>
-      //           `;
+    for (let i = 0; i < generaciones.length; i++) {
+      let campus = generaciones[i][i].campus;
+      let generacion = generaciones[i][i].generation;
+      let estudiantesTotales = generaciones[i][i].count;
+      // console.log(generacion);
+      // console.log(campus);
+      console.log(estudiantesTotales);
+      if (valuess === generacion) {
+        relleno += `
+                  <p>${estudiantesTotales}</p>
+                    `;
+        root.innerHTML = relleno;
+      } else {
+        console.log('pos no');
+      }
     }
+    // relleno += `
+    // //           <p>${data.computeGenerationsStats(laboratoria)[i]} </p>
+    // //           `;
 
     // for (let i = 0; i < arr.length; i++) {
     //   totalStudents = arr[i][0].count;
@@ -144,7 +166,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
 //   }
 //   }
 // }
-
 
 
 // console.log(selector[e.target.selectedIndex].innerHTML);

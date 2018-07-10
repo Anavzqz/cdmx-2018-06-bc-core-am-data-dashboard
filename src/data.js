@@ -20,7 +20,7 @@ window.data = { // Carga la data al abirir la página
     let duration = 0;
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
-      campus = key.toUpperCase(); // Obteniendo sede y volviendola mayúsculas
+      campus = key; // Obteniendo sede y volviendola mayúsculas
       const generations = Object.keys(laboratoria[key].generacion); // Devolviendo las propiedades del objeto generacion
 
       generations.map((generation) => {
@@ -50,7 +50,7 @@ window.data = { // Carga la data al abirir la página
             'name': name,
             'email': email,
             'campus': campus,
-            'generation': generation.toUpperCase(), // Volviendo mayúsculas
+            'generation': generation, // Volviendo mayúsculas
 
             stats: {
               'status': status,
@@ -69,12 +69,14 @@ window.data = { // Carga la data al abirir la página
             }
 
           };
+
         });
         student.push(newArray); // Agregando elementos al array
       });
     }
     return student;
   },
+
 
 
   computeGenerationsStats: (laboratoria) => { // Función generación
@@ -99,8 +101,8 @@ window.data = { // Carga la data al abirir la página
 
           average = Math.round(average / array.length); // Redondeando promedio
           return { // Creación del objeto
-            'campus': key.toUpperCase(), // Volviendo mayúsculas
-            'generation': generation.toUpperCase(), // Volviendo mayúsculas
+            'campus': key, // Volviendo mayúsculas
+            'generation': generation, // Volviendo mayúsculas
 
             'average': average,
             'count': array.length
@@ -111,5 +113,15 @@ window.data = { // Carga la data al abirir la página
       });
     }
     return countGen;
+  },
+  getGeneration: (laboratoria) => {
+    for (key in laboratoria) {
+      const generatioN = Object.keys(laboratoria[key].generacion);
+      return generatioN;
+    }
+  },
+  getCampus: (laboratoria) => {
+    let sedes = Object.getOwnPropertyNames(laboratoria);
+    return sedes;
   }
 };
