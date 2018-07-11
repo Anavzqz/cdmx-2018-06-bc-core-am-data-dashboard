@@ -1,5 +1,6 @@
 html,body{
  margin: 0px;
+
  /* height: 100%; */
 }
 body{
@@ -23,6 +24,10 @@ aside{
  order: 1;
  background-color: #FFE521;
  /*display: none;*/
+}
+.estudiantes-box{
+  border-radius: 50px;
+  background-color: #FFF39A;
 }
 #welcome{
   font-size: .7em;
@@ -129,9 +134,4 @@ border-radius: 1em;
 #Login{
  font-family: 'Roboto', sans-serif;
  text-align: center;
-}
-.estudiantes-box{
-  border-radius: 50px;
-  background-color: #FFF39A;
-
 }

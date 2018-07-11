@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0px;
+  color: #262626;
+  background-color: #FFF8C4;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex: 1;
+  /* height: 100%; */
+}
+
+main {
+  flex: 4;
+  order: 2;
+  text-align: center;
+  flex-grow: 3;
+}
+
+aside {
+  float: left;
+  width: 10%;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1.8em;
+  flex: 1;
+  order: 1;
+  background-color: #FFE521;
+  /*display: none;*/
+}
+
+.numeros {
+  padding: 4px;
+  margin: 4px;
+  font-size: 6em;
+  font-weight: bolder;
+  text-shadow: 2px 2px #FF009E;
+}
+#quote{
+  font-size: 4em;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px #FF009E;
+}
+.estudiantes-box{
+  background-color: #FFEA4B;
+  border: 1px solid #d6cfc2;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+}
+.lista{
+  display: flex;
+  text-align: left;
+  background-color: #FFEA4B;
+  border: 1px solid #d6cfc2;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+}
+.lista:hover{
+  box-shadow: 4px 10px 50px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+#avi{
+  display: flex;
+  width: 5em;
+  height: 5em;
+  text-align: left;
+}
+
+#profilepic {
+  text-align: center;
+  border-radius: 80px;
+}
+
+/* .estuBox{
+ text-align: center;
+ display: block;
+ font-family: 'Roboto', sans-serif;
+} */
+
+#subtitulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+}
+
+#selectores {
+  text-align: center;
+}
+
+.selecciones {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 90px !important;
+  height: 45px !important;
+  background: #FFEF75 !important;
+  border-radius: 1em;
+}
+.buttons{
+  background-color: #D8BF01;
+  width: 60px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+#inputs {
+  position: absolute;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  width: 500px;
+  height: 275px;
+  left: 30%;
+  top: 30%;
+  text-align: center;
+  background: #FFE521;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 78px;
+}
+
+#usuario,
+#clave {
+  font-family: 'Roboto', sans-serif;
+  color: #442A07;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 250px;
+  height: 60px;
+  background: #FFF8C4;
+  border-radius: 1em;
+}
+
+#entrar {
+  font-family: 'Roboto', sans-serif;
+  color: #442A07;
+  margin-top: 15px;
+  width: 129.51px;
+  height: 48px;
+  background: #FFEB54;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+#entrar:active {
+  background-color: #D8BF01;
+  box-shadow: 0 5px #AA9600;
+  transform: translateY(4px);
+}
+
+#labo {
+  margin-top: .8em;
+  width: 8em;
+  height: 8em;
+  border-radius: 150px;
+}
+
+#Login {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}

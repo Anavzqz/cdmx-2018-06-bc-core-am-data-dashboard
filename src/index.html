@@ -1,60 +1,67 @@
 <head>
 
  <meta charset="utf-8">
+ <meta name="viewport" content="width=device−width, initial−scale=1" />
  <title>Data Dashboard</title>
- <link rel="stylesheet" href="style.css" />
- <link rel="stylesheet" href="responsive.css" />
+ <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="css/responsive.css" />
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"-->
  <!--link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/-->
 </head>
 
 <body>
+
  <header>
  </header>
  <main>
 
-   <!-- <img src= "../src/img/logolabo.png" alt="" id="labor">
+  <img src= "../src/img/logolabo.png" alt="" id="labor">
 
    <section id="login-box">
 
-   <section id="inputs">
+   <!-- <section id="inputs">
      <input type="text" name="usuario" id="usuario" placeholder="username">
      <input type="password" name="clave" id="clave" placeholder="password">
      <br>
      <input type="button" value="Login" id="entrar">
-   </section>
+   </section> -->
 
     </section>
-  </section> -->
-   <div id="root"></div>
+  </section>
+   <div id="root">
+  <!-- <p id="quote"> "Develop a passion for learning. If you do, you will never cease to grow".</p>  -->
+</div>
+   <div id="root2"></div>
  </main>
 
  <aside id="lateral">
-
-   <img id="labo" src="../src/img/lucile.png" alt="">
-   <p id="welcome">Bienvenida @lucile </p>
+   <img id="labo" src="../src/img/profilepic.jpg" alt="">
+   <p id="welcome">Bienvenida @admin </p>
 
  <section id="selectores">
-   <div id="box-login">
-     <select name="" id="selector" class="selecciones"></select>
-     <select name="" id="selector-gen" class="selecciones"></select>
+
+     <select name="" id="selector" class="selecciones">
+       <option value="Campus" disabled selected>Campus</option> <!--Disabled selected origina una opcion fija sin opcion de seleccionarla-->
+     </select>
+     <select name="" id="selector-gen" class="selecciones">
+       <option value="Generacion" disabled selected>Generacion</option>
+
+     </select>
      <br>
-     <button type="button" id="cleaning"name="button" class="selecciones">Limpia</button>
-     <br>
-     <button type="button" name="button" id="exit" class="selecciones">Salir</button>
-   </div>
+     <button type="button" id="cleaning"name="button" class="buttons">Limpia</button>
+     <button type="button" name="button" id="exit" class="buttons">Salir</button>
+
+
 
  </section>
 </aside>
+ <script src="js/main.js"></script>
+ <script src="js/data.js"></script>
 
-      </main>
-
-
- <script src="main.js"></script>
- <script src="data.js"></script>
-
-
+</main>
+<!-- <footer> <img src="../src/img/F_icon.png" alt="" class="social-icons" >
+</footer> -->
 </body>
 
 
