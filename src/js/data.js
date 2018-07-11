@@ -133,5 +133,8 @@ window.data = { // Carga la data al abirir la página
   getCampus: (laboratoria) => {
     let sedes = Object.getOwnPropertyNames(laboratoria);
     return sedes;
+  },
+  promedio: (laboratoria) => {
+
   }
 };
