@@ -4,6 +4,7 @@ html,body{
 }
 body{
  font-family: 'Roboto', sans-serif;
+ color: #1E2422;
  display: flex;
 }
 main{
@@ -23,33 +24,39 @@ aside{
  background-color: #FFE521;
  /*display: none;*/
 }
+#welcome{
+  font-size: .7em;
+}
 #profilepic{
 
  text-align: center;
  border-radius: 80px;
 }
-/* .estuBox{
- text-align: center;
- display: block;
- font-family: 'Roboto', sans-serif;
-} */
-#subtitulo{
-font-family: 'Roboto', sans-serif;
-font-size: 2em;
-}
+
 #selectores{
  text-align: center;
+ /* position: absolute;
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+width: 500px;
+height: 275px;
+left: 30%;
+top: 30%;
 
+background: #FFE521;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 78px; */
 }
+
 .selecciones{
 font-family: 'Roboto', sans-serif;
 margin-top: 20px;
 text-align: center;
 font-weight: bold;
-width: 100px;
-height: 60px;
-background: #DAC867;
-border-radius: 1em;
+width: 80px;
+height: 30px;
+background: #FFEA4B;
+border-radius: .5em;
 }
 #inputs{
  position: absolute;
@@ -60,10 +67,26 @@ height: 275px;
 left: 30%;
 top: 30%;
 text-align: center;
-background: #FFE521;
+background: #FFEB54;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 78px;
 }
+.selecciones{
+
+}
+/* #box-login{
+  position: absolute;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+width: 500px;
+height: 275px;
+left: 30%;
+top: 30%;
+
+background: #FFE521;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 78px;
+} */
 
 #usuario, #clave{
 font-family: 'Roboto', sans-serif;
@@ -98,11 +121,17 @@ border-radius: 1em;
 }
 #labo{
  margin-top: .8em;
- width: 8em;
- height: 8em;
+ width: 5em;
+ height: 5em;
+ border-radius: 150%;
 }
 
 #Login{
  font-family: 'Roboto', sans-serif;
  text-align: center;
+}
+.estudiantes-box{
+  border-radius: 50px;
+  background-color: #FFF39A;
+
 }

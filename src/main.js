@@ -39,6 +39,9 @@ const pullData = () => {
       const generaciones = data.computeGenerationsStats(laboratoria);
       const obtenerGeneracion = data.getGeneration(laboratoria);
       const obtenerCampus = data.getCampus(laboratoria);
+
+      const getpromedio = data.promedio(laboratoria);
+
     });
   // .catch(error => {
   //   console.log("Error");
@@ -83,15 +86,17 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
       for (let i = 0; i < generaciones.length; i++) {
         let campus = generaciones[i][i].campus;
         let generacion = generaciones[i][i].generation;
-        let estudiantesTotales = generaciones[i][i].count;
+        let totalStudents = generaciones[i][i].count;
         // console.log(generacion);
         console.log(generaciones[i][i].generation);
         if (selectGeneration === generacion && selectCampus === campus) {
           console.log('si sirvo we');
           root += `
                   <div class="estudiantes-box">
-                  <h1>Estudiantes totales:</h1>
-                  <p>${estudiantesTotales}</p>
+                  <h1>${selectCampus.charAt(0).toUpperCase() + selectCampus.slice(1)}</h1>
+                  <h3>${selectGeneration.charAt(0).toUpperCase() + selectGeneration.slice(1)} generación </h3>
+                  <h3>Estudiantes totales:</h3>
+                  <p>${totalStudents}</p>
                   <p>Promedio general: </p>
                   </div>
                     `;
