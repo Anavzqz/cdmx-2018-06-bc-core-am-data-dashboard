@@ -39,7 +39,9 @@ const pullData = () => {
       const generaciones = data.computeGenerationsStats(laboratoria);
       const obtenerGeneracion = data.getGeneration(laboratoria);
       const obtenerCampus = data.getCampus(laboratoria);
+
       const getpromedio = data.promedio(laboratoria);
+
     });
   // .catch(error => {
   //   console.log("Error");
