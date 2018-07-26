@@ -1,4 +1,20 @@
+const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
+window.onload = ()=> { // Ejecuta la funcion cuando se carga la pagina
+  fetch(url).then(response => response.json())
+    .then(laboratoria => { // Asignando nombre a la información
+      drawCampus(laboratoria);
+      const estudiantes = data.computeStudentsStats(laboratoria);
+      const generaciones = data.computeGenerationsStats(laboratoria);
+      const obtenerGeneracion = data.getGeneration(laboratoria);
+      const obtenerCampus = data.getCampus(laboratoria);
+    })
+    .catch(error => {
+      console.log('Error');
+    });
+};
+
 window.data = { // Carga la data al abirir la página
+  // Aqui intentamos trabajar en las funciones pero no pudimos ligar.
 
   computeStudentsStats: (laboratoria) => { // Función lista de estudiantes
     const student = [];
@@ -42,8 +58,6 @@ window.data = { // Carga la data al abirir la página
           }
           percentageDuration = array[i].progreso.duracionPrograma;
           topics = array[i].progreso.temas;
-          // for(topics in laboratoria)
-
 
           return {
 
@@ -51,7 +65,6 @@ window.data = { // Carga la data al abirir la página
             'email': email,
             'campus': campus,
             'generation': generation, // Volviendo mayúsculas
-
             stats: {
               'status': status,
               'completedPercentage': completedPercentage,
@@ -69,7 +82,6 @@ window.data = { // Carga la data al abirir la página
             }
 
           };
-
         });
         student.push(newArray); // Agregando elementos al array
       });
@@ -78,42 +90,40 @@ window.data = { // Carga la data al abirir la página
   },
 
 
-
   computeGenerationsStats: (laboratoria) => { // Función generación
     const countGen = [];
-    let otherArray = [];
+    // let otherArray = [];
     let campus = '';
-    let generation = '';
+    let generationOne = '';
     let average = 0;
-
+    let newTotal ;
+    let countStudent ;
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
       campus = key; // Sede
       average = 0;
       const generations = Object.keys(laboratoria[key].generacion);
-
-      generations.map((generation) => {
-        generation = generation;
+      generations.forEach((generation) => {
+        generationOne = generation;
         // console.log(generation);
-        const pupils = laboratoria[key].generacion[generation].estudiantes;
-        otherArray = pupils.map((pupil, i, array) => { // Map usa tres parámetros para recorrer el objeto por su indice y devolver un array
-          average += array[i].progreso.porcentajeCompletado;
-
-          average = Math.round(average / array.length); // Redondeando promedio
-          return { // Creación del objeto
-            'campus': key, // Volviendo mayúsculas
-            'generation': generation, // Volviendo mayúsculas
-
-            'average': average,
-            'count': array.length
-          };
-        });
-
-        countGen.push(otherArray);
+        const students = laboratoria[key].generacion[generation].estudiantes;
+        average = 0;
+        for (studen in students) {
+          average += students[studen].progreso.porcentajeCompletado;
+          newTotal = Math.round(average / students.length);
+          countStudent = students.length;
+        }
+        countGen.push({'campus': campus,
+          'generation': generationOne,
+          'average': newTotal,
+          'count': countStudent});
       });
     }
+
+
     return countGen;
   },
+
   getGeneration: (laboratoria) => {
     for (key in laboratoria) {
       const generatioN = Object.keys(laboratoria[key].generacion);

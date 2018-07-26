@@ -75,7 +75,6 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
     const estudiantes = data.computeStudentsStats(laboratoria);
     const generaciones = data.computeGenerationsStats(laboratoria);
     // console.log(generaciones);
-
     // const obtenerGeneracion = data.getGeneration(laboratoria);
     // const obtenerCampus = data.getCampus(laboratoria);
     // arr = data.computeGenerationsStats(laboratoria);

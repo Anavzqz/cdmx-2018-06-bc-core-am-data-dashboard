@@ -58,7 +58,7 @@ window.data = { // Carga la data al abirir la página
           }
           percentageDuration = array[i].progreso.duracionPrograma;
           topics = array[i].progreso.temas;
-
+          
           return {
 
             'name': name,
@@ -96,7 +96,7 @@ window.data = { // Carga la data al abirir la página
     let campus = '';
     let generationOne = '';
     let average = 0;
-    let newTotal ;
+    let newTotal ; 
     let countStudent ;
 
     for (key in laboratoria) { // Recorriendo las propiedades del objeto
@@ -119,8 +119,8 @@ window.data = { // Carga la data al abirir la página
           'count': countStudent});
       });
     }
-
-
+   
+    
     return countGen;
   },
 
