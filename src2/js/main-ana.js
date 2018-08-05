@@ -1,9 +1,11 @@
+const url = 'https://anavzqz.github.io/cdmx-2018-06-bc-core-am-data-dashboard/data/laboratoria.json';
+
 window.onload = () => {
-  fetch('https://anavzqz.github.io/cdmx-2018-06-bc-core-am-data-dashboard/data/laboratoria.json')
+  fetch(url)
     .then(response => response.json())
     .then((laboratoria) => {
+      computeStudentsStats(laboratoria);
       getData(laboratoria);
-
     })
     //.catch(error => {
       //console.log("error");
@@ -52,7 +54,7 @@ const card = (campus, generation, count, average)=>{
   if (drawBox === generacion && drawBox2 === campus) {
 
     root1 += `<div>
-             <h4>${campus}</h4>
+             <p>${campus}</p>
              <p>${generation}</p>
              <p>${count}</p>
              <p>${average}</p>

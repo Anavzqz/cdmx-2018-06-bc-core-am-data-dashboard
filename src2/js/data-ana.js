@@ -1,9 +1,49 @@
 
 window.computeStudentsStats = (laboratoria) => {
+  console.log(laboratoria);
+  let generations = {
+    sede: null,
+    generation: null,
+    student: null,
+    email: null,
+    name: null,
+    progress: null,
+    turn: null,
+  }
+ let students =[];
 
+  for (key in laboratoria){//Iteramos en la data con for in, para entrar a generaciones
+    generations.sede = key; //Guardamos la ruta de las sedes con el nombre key
+    console.log(key);//confirmamos que nos traiga el objeto de las sedes
+    let gen = Object.keys(laboratoria[key].generacion);//Devuelve un array con las generaciones de cada sede
+    console.log(gen);
+    gen.forEach((gen) =>{//Iteramos en la generacion
+      generations.generacion = gen;//Guardamos la ruta a las generaciones en gen
+      console.log(gen);
+      let students = laboratoria[key].generacion[gen].estudiantes;//Guardamos la ruta a las estudiantes en una variable
+      console.log(students);
+      students.forEach((student) => {//Entramos al arreglo de objetos de estudiantes y sacamos sus propiedades
+        email = student.correo;
+        console.log(email);
+        name = student.nombre;
+        console.log(name);
+        progress = student.progreso;
+        console.log(progress);
+        turn = student.turno;
+        console.log(turn);
+        percentage = student.progreso.porcentajeCompletado;
+        console.log(percentage);
+        let topics = student.progreso.temas;
+        console.log(topics);
+      })
+
+    })
+  }
 }
 
+
 window.computeGenerationsStats = (laboratoria) => {
+  console.log(laboratoria);
   //Declaramos una función que contenga los datos del objeto para ir marcando la ruta
       let generations = {
       //propiedades del objeto
@@ -12,6 +52,7 @@ window.computeGenerationsStats = (laboratoria) => {
       count: null,//Vamos a hacer el conteo de las estudiantes
       average: null//Sacamos el porcentaje completado por alumna
       }
+      //Declaramos el arreglo de generaciones que va a retornar la funcion
        const arrayGenerations = [];
       //La sentencia for in itera en toda la data, por eso agregamos "laboratoria", para cada una de las propiedades se ejecuta una sentencia.
       for (key in laboratoria){
@@ -31,7 +72,7 @@ window.computeGenerationsStats = (laboratoria) => {
            //Guardamos en una variable la ruta de las estudiantes y contamos el total con la propiedad .length
            let count = laboratoria[key].generacion[item].estudiantes.length;
            generations.count = count;
-           console.log(count);//Nos da el total de las estudienates en number
+           console.log(count);//Nos da el total de las estudiantes en number
            average = 0;
            //Vamos a entrar al porcentaje completado iterando con for in en estudiantes
           for (student in students){
@@ -48,8 +89,7 @@ window.computeGenerationsStats = (laboratoria) => {
 return arrayGenerations;
 console.log(arrayGenerations);
 
-}
-
+};
 
 
 /*window.sortStudents(laboratoria) () =>{

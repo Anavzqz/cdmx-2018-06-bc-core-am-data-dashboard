@@ -1,4 +1,4 @@
-const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
+/*const url = 'https://api.myjson.com/bins/nslqe'; // Jalar URL
 window.onload = ()=> { // Ejecuta la funcion cuando se carga la pagina
   fetch(url).then(response => response.json())
     .then(laboratoria => { // Asignando nombre a la información
@@ -11,13 +11,12 @@ window.onload = ()=> { // Ejecuta la funcion cuando se carga la pagina
     .catch(error => {
       console.log('Error');
     });
-};
+};*/
 
-window.data = { // Carga la data al abirir la página
-  // Aqui intentamos trabajar en las funciones pero no pudimos ligar.
-
-  computeStudentsStats: (laboratoria) => { // Función lista de estudiantes
-    const student = [];
+ window.computeStudentsStats= (laboratoria) => { // Función lista de estudiantes
+    
+  
+    /*const student = [];
     let newArray = []; // Variables con nombres acorde al readme
     let name = '';
     let email = '';
@@ -136,5 +135,5 @@ window.data = { // Carga la data al abirir la página
   },
   promedio: (laboratoria) => {
 
-  }
+  }*/
 };

@@ -1,3 +1,15 @@
+window.onload = () => {
+  fetch('https://anavzqz.github.io/cdmx-2018-06-bc-core-am-data-dashboard/data/laboratoria.json')
+    .then(response => response.json())
+    .then((laboratoria) => {
+      getData(laboratoria);
+    })
+    //.catch(error => {
+      //console.log("error");
+    //})
+};
+
+
 // Todo lo que se muestre en pantalla va en este archivo
 // lateral.style.display = 'none';
 let primerCaja = document.querySelector('#inputs'); // Trayendo caja de inputs de HTML
@@ -127,7 +139,7 @@ const drawCampus = (laboratoria) => { // Función para pintar en HTML
         <img id="avi" src="../src/img/avatar.png" alt="">
         <p> Nombre: ${name} <br> Correo electrónico: ${email}</p>
         </div>
-        `
+        `;
         console.log('sisepudowe');
         fill2.innerHTML = root2
 
